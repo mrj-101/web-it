@@ -6,7 +6,7 @@ const items = ref([
     icon: 'lucide:table-columns-split'
   }, {
     label: 'ข้อมูลครู',
-    to: '/base/teacher',
+    to: '/base/teacher/',
     icon: 'lucide:user-round-check'
   }, {
     label: 'ข้อมูลนักเรียน',
@@ -16,11 +16,7 @@ const items = ref([
     label: 'กิจกรรม',
     to: '/base/activity',
     icon: 'lucide:user-round-check'
-  }, {
-    label: 'ผู้จัดทำ',
-    to: '/author',
-    icon: 'fluent:accessibility-16-filled'
-  }
+  },
 ])
 </script>
 
@@ -32,7 +28,7 @@ const items = ref([
         <NuxtLink to="/">Web-IT</NuxtLink>
       </h1>
       <div class="hidden md:flex">
-        <ul class="flex gap-8">
+        <ul class="flex gap-8 w-full">
           <li v-for="item in items" :key="item.to" class="cursor-pointer hover:text-red-700">
             <NuxtLink :to="item.to">
               <UIcon :name="item.icon"></UIcon> {{ item.label }}
@@ -42,7 +38,7 @@ const items = ref([
       </div>
     </template>
     <template #body>
-      <UNavigationMenu :items="items" orientation="vertical" mode="slideover" class="-mx-2.5 flex w-1/2 content-end" />
+      <UNavigationMenu :items="items" orientation="vertical" mode="slideover" class="-mx-2.5 flex content-end" />
     </template>
     <template #right>
       <NuxtLink to="/login">
