@@ -12,6 +12,10 @@ const items = ref([
     label: 'ข้อมูลนักเรียน',
     to: '/base/student',
     icon: 'lucide:user-round-check'
+  }, {
+    label: 'กิจกรรม',
+    to: '/base/activity',
+    icon: 'lucide:user-round-check'
   }
 ])
 </script>
