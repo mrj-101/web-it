@@ -16,6 +16,10 @@ const items = ref([
     label: 'กิจกรรม',
     to: '/base/activity',
     icon: 'lucide:user-round-check'
+  }, {
+    label: 'ผู้จัดทำ',
+    to: '/author',
+    icon: 'fluent:accessibility-16-filled'
   }
 ])
 </script>
